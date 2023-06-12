@@ -3,6 +3,8 @@ package dbconfig
 import (
 	"database/sql"
 	"fmt"
+
+	_ "github.com/go-sql-driver/mysql"
 )
 
 func DBConnection() (*sql.DB, error) {
@@ -13,4 +15,5 @@ func DBConnection() (*sql.DB, error) {
 	}
 	fmt.Println("Database is connected successfully")
 	return db, nil
+
 }
